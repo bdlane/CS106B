@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6D634472531027500ABBAD4 /* spl.jar in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6E1B943252C502B00D5914C /* spl.jar */; };
 		C6E1B93C252C4F9B00D5914C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6E1B93B252C4F9B00D5914C /* main.cpp */; };
 		C6E1B944252C502C00D5914C /* spl.jar in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E1B943252C502B00D5914C /* spl.jar */; };
 		C6E1B947252C504300D5914C /* libStanfordCPPLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E1B946252C504300D5914C /* libStanfordCPPLib.a */; };
@@ -15,12 +16,13 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		C6E1B936252C4F9B00D5914C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				C6D634472531027500ABBAD4 /* spl.jar in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
