@@ -17,9 +17,11 @@ using namespace std;
 Lexicon lexicon("EnglishWords.txt");
 Set<string> usedWords;
 
-Vector<string> getLadder(string startWord, string destinationWord);
+typedef Vector<string> Ladder;
+
+Ladder getLadder(string startWord, string destinationWord);
 Vector<string> getNextWords(string word);
-string ladderToString(Vector<string> ladder);
+string ladderToString(Ladder ladder);
 
 int main() {
     while (true) {
@@ -33,12 +35,12 @@ int main() {
         cout << "Enter destination word: ";
         string destinationWord = getLine();
         
-        Vector<string> ladder = getLadder(startWord, destinationWord);
+        Ladder result = getLadder(startWord, destinationWord);
         
-        if (ladder.isEmpty()) {
+        if (result.isEmpty()) {
             cout << "No ladder found" << endl;
         } else {
-            cout << "Found ladder: " << ladderToString(ladder) << endl;
+            cout << "Found ladder: " << ladderToString(result) << endl;
         }
     }
     
@@ -47,28 +49,27 @@ int main() {
 
 Vector<string> getLadder(string startWord, string destinationWord) {
     // Prime the queue
-    Queue<Vector<string>> ladders;
-    Vector<string> ladder;
-    ladder.add(startWord);
-    
-    ladders.enqueue(ladder);
+    Queue<Ladder> ladders;
+    Ladder initial;
+    initial.add(startWord);
+    ladders.enqueue(initial);
     
     // Begin the search
     while (!ladders.isEmpty()) {
-        Vector<string> ladder = ladders.dequeue();
-        string endWord = ladder[ladder.size()- 1];
+        Ladder current = ladders.dequeue();
+        string endWord = current[current.size()- 1];
         if (endWord == destinationWord) {
-            return ladder;
+            return current;
         }
                     
         foreach(string word in getNextWords(endWord)) {
-            Vector<string> l = ladder;
-            l.add(word);
-            ladders.enqueue(l);
+            Ladder next = current;
+            next.add(word);
+            ladders.enqueue(next);
         }
     }
     
-    return Vector<string>();
+    return Ladder();
 }
 
 Vector<string> getNextWords(string word) {
@@ -93,7 +94,7 @@ Vector<string> getNextWords(string word) {
     return words;
 }
 
-string ladderToString(Vector<string> ladder) {
+string ladderToString(Ladder ladder) {
     string result;
     foreach(string word in ladder) {
         result += word += " ";
