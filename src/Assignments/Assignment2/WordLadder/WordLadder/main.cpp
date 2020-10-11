@@ -85,7 +85,7 @@ Vector<string> getNextWords(string word) {
             if (c == newWord[i]) {
                 continue;
             }
-            newWord.replace(i, 1, string(1, c));
+            newWord[i] = c;
             if (lexicon.contains(newWord) && !usedWords.contains(newWord)){
                 words.add(newWord);
                 usedWords.add(newWord);
