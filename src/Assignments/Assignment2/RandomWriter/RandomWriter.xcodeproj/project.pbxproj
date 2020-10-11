@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6123F4C2533688C0039368A /* Hamlet.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6123F4A253368820039368A /* Hamlet.txt */; };
+		C6123F4D2533688C0039368A /* Middlemarch.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6123F4B253368820039368A /* Middlemarch.txt */; };
+		C6123F4E2533688C0039368A /* TomSawyer.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6123F49253368820039368A /* TomSawyer.txt */; };
+		C6123F5125336C180039368A /* test.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6123F5025336C130039368A /* test.txt */; };
 		C6551CF32530E06B0006D26F /* spl.jar in Frameworks */ = {isa = PBXBuildFile; fileRef = C6551CF22530E06B0006D26F /* spl.jar */; };
 		C6D6344B253102DD00ABBAD4 /* spl.jar in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6551CF22530E06B0006D26F /* spl.jar */; };
 		C6E5B0B12530DDFE007052DF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6E5B0B02530DDFE007052DF /* main.cpp */; };
@@ -20,6 +24,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				C6123F5125336C180039368A /* test.txt in CopyFiles */,
+				C6123F4C2533688C0039368A /* Hamlet.txt in CopyFiles */,
+				C6123F4D2533688C0039368A /* Middlemarch.txt in CopyFiles */,
+				C6123F4E2533688C0039368A /* TomSawyer.txt in CopyFiles */,
 				C6D6344B253102DD00ABBAD4 /* spl.jar in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -27,6 +35,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C6123F49253368820039368A /* TomSawyer.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TomSawyer.txt; sourceTree = "<group>"; };
+		C6123F4A253368820039368A /* Hamlet.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Hamlet.txt; sourceTree = "<group>"; };
+		C6123F4B253368820039368A /* Middlemarch.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Middlemarch.txt; sourceTree = "<group>"; };
+		C6123F5025336C130039368A /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
 		C6551CF22530E06B0006D26F /* spl.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; name = spl.jar; path = ../../../../lib/spl.jar; sourceTree = "<group>"; };
 		C6E5B0AD2530DDFE007052DF /* RandomWriter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RandomWriter; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E5B0B02530DDFE007052DF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -46,9 +58,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C6123F48253368380039368A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C6123F5025336C130039368A /* test.txt */,
+				C6123F4A253368820039368A /* Hamlet.txt */,
+				C6123F4B253368820039368A /* Middlemarch.txt */,
+				C6123F49253368820039368A /* TomSawyer.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		C6E5B0A42530DDFE007052DF = {
 			isa = PBXGroup;
 			children = (
+				C6123F48253368380039368A /* Resources */,
 				C6E5B0AF2530DDFE007052DF /* RandomWriter */,
 				C6E5B0AE2530DDFE007052DF /* Products */,
 				C6E5B0BB2530DEC9007052DF /* Frameworks */,
