@@ -52,9 +52,7 @@ int main() {
 Vector<string> getLadder(string startWord, string destinationWord) {
     // Prime the queue
     Queue<Ladder> ladders;
-    Ladder initial;
-    initial.add(startWord);
-    ladders.enqueue(initial);
+    ladders.enqueue(Ladder(1, startWord));
     
     // Begin the search
     while (!ladders.isEmpty()) {
