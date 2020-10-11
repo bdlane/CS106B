@@ -42,6 +42,8 @@ int main() {
         } else {
             cout << "Found ladder: " << ladderToString(result) << endl;
         }
+        
+        usedWords.clear();
     }
     
     return 0;
